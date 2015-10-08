@@ -1,0 +1,13 @@
+Разделить класс KeyHandler на классы KeyHandler и PlayerAction
+KeyHandler должен вызывать соответствующие нажатой кнопке методы класса PlayerAction.
+
+грубо:
+KeyHandler
+{
+if (pressedKey == ARROW_LEFT) PlayerAction.moveLeft;
+}
+
+PlayerAction
+{
+void moveleft() { Player.x--; }
+}
