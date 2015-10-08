@@ -1,0 +1,35 @@
+javac  -classpath ./classes -d ./classes src/roguelike/MainPanel.java
+javac  -classpath ./classes -d ./classes src/roguelike/LevelUpKeyHandler.java
+javac  -classpath ./classes -d ./classes src/roguelike/Item.java
+javac  -classpath ./classes -d ./classes src/roguelike/Game.java
+javac  -classpath ./classes -d ./classes src/roguelike/Monster.java
+javac  -classpath ./classes -d ./classes src/roguelike/KeyHandler.java
+javac  -classpath ./classes -d ./classes src/roguelike/Itemset.java
+javac  -classpath ./classes -d ./classes src/roguelike/DescPanel.java
+javac  -classpath ./classes -d ./classes src/roguelike/ScriptObject.java
+javac  -classpath ./classes -d ./classes src/roguelike/ScriptParser.java
+javac  -classpath ./classes -d ./classes src/roguelike/EqKeyHandler.java
+javac  -classpath ./classes -d ./classes src/roguelike/EqPanel.java
+javac  -classpath ./classes -d ./classes src/roguelike/ItemSelectPanel.java
+javac  -classpath ./classes -d ./classes src/roguelike/Stat.java
+javac  -classpath ./classes -d ./classes src/roguelike/BaseItem.java
+javac  -classpath ./classes -d ./classes src/roguelike/MonsterSet.java
+javac  -classpath ./classes -d ./classes src/roguelike/ItemSelectKeyHandler.java
+javac  -classpath ./classes -d ./classes src/roguelike/EqWindow.java
+javac  -classpath ./classes -d ./classes src/roguelike/DescKeyHandler.java
+javac  -classpath ./classes -d ./classes src/roguelike/DescWindow.java
+javac  -classpath ./classes -d ./classes src/roguelike/ItemSelectWindow.java
+javac  -classpath ./classes -d ./classes src/roguelike/ItemSelectMessage.java
+javac  -classpath ./classes -d ./classes src/roguelike/Map.java
+javac  -classpath ./classes -d ./classes src/roguelike/Tile.java
+javac  -classpath ./classes -d ./classes src/roguelike/LevelUpPanel.java
+javac  -classpath ./classes -d ./classes src/roguelike/LevelUpWindow.java
+javac  -classpath ./classes -d ./classes src/roguelike/BaseMonster.java
+javac  -classpath ./classes -d ./classes src/roguelike/Tileset.java
+javac  -classpath ./classes -d ./classes src/roguelike/MapGenerator.java
+javac  -classpath ./classes -d ./classes src/roguelike/BaseTile.java
+javac  -classpath ./classes -d ./classes src/roguelike/GameWindow.java
+javac  -classpath ./classes -d ./classes src/roguelike/ColorSet.java
+javac  -classpath ./classes -d ./classes src/roguelike/Roguelike.java
+java -classpath ./classes;./lib project1.Roguelike
+pause
