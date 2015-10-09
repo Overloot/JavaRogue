@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/roguelike/BaseItem.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/BaseMonster.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/BaseTile.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/ColorSet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/DescKeyHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/DescPanel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/DescWindow.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/EqKeyHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/EqPanel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/EqWindow.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/Game.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/GameWindow.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/Item.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/ItemSelectKeyHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/ItemSelectMessage.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/ItemSelectPanel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/ItemSelectWindow.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/Itemset.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/KeyHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/LevelUpKeyHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/LevelUpPanel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/LevelUpWindow.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/MainPanel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/Map.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/MapGenerator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/Monster.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/Monsterset.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/ScriptObject.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/ScriptParser.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/Stat.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/Tile.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/Tileset.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/roguelike/roguelike.java" charset="UTF-8" />
+  </component>
+</project>

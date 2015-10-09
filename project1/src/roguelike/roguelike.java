@@ -9,14 +9,12 @@
 
 package project1;
 
-import project1.Game;
+public class Roguelike {
 
-public class Roguelike{
-
-	public static void main(String[] args){
-		Game game1 = new Game();
-		game1.init();
-		game1.run();
-		game1.done();
-	}
+    public static void main(String[] args) {
+        Game game1 = new Game();
+        game1.init();
+        game1.run();
+        game1.done();
+    }
 }

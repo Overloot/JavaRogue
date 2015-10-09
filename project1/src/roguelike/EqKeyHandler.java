@@ -1,79 +1,71 @@
 package project1;
 
-import java.awt.event.*;
-import java.util.*;
-import javax.swing.*;
-import project1.Map;
-import project1.DescWindow;
-import project1.DescPanel;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 
+public class EqKeyHandler implements KeyListener {
 
-public class EqKeyHandler implements KeyListener{
-
-	EqPanel ep;
-
-
-	public EqKeyHandler(EqPanel ep){
-		super();
-		this.ep = ep;
-	};
+    EqPanel ep;
 
 
+    public EqKeyHandler(EqPanel ep) {
+        super();
+        this.ep = ep;
+    }
+
+    ;
 
 
-	public synchronized void keyPressed(KeyEvent event){
-		int keycode = event.getKeyCode();
-		if (keycode == KeyEvent.VK_DOWN){
-			if (ep.current != -1){
-				int nc = ep.current + 1;
-				if (nc >=( Itemset.MAX_SLOTS - 1)) nc = 0;
-				while (ep.ewindow.monster.Equipment[nc] == null){
-				    nc++;
-					if (nc >=( Itemset.MAX_SLOTS - 1)) nc = 0;
-				}
-				ep.current = nc;
-			}
-		}
-		else
-		if (keycode == KeyEvent.VK_UP){
-			if (ep.current != -1){
-				int nc = ep.current - 1 ;
-				if (nc < 0 ) nc = Itemset.MAX_SLOTS - 1;
-				while (ep.ewindow.monster.Equipment[nc] == null){
-					   nc--;
-						if (nc < 0 ) nc = Itemset.MAX_SLOTS - 1;
-					}
+    public synchronized void keyPressed(KeyEvent event) {
+        int keycode = event.getKeyCode();
+        if (keycode == KeyEvent.VK_DOWN) {
+            if (ep.current != -1) {
+                int nc = ep.current + 1;
+                if (nc >= (Itemset.MAX_SLOTS - 1)) nc = 0;
+                while (ep.ewindow.monster.Equipment[nc] == null) {
+                    nc++;
+                    if (nc >= (Itemset.MAX_SLOTS - 1)) nc = 0;
+                }
+                ep.current = nc;
+            }
+        } else if (keycode == KeyEvent.VK_UP) {
+            if (ep.current != -1) {
+                int nc = ep.current - 1;
+                if (nc < 0) nc = Itemset.MAX_SLOTS - 1;
+                while (ep.ewindow.monster.Equipment[nc] == null) {
+                    nc--;
+                    if (nc < 0) nc = Itemset.MAX_SLOTS - 1;
+                }
 
-				ep.current = nc;
-			}
-		}
+                ep.current = nc;
+            }
+        } else if (keycode == KeyEvent.VK_ENTER && ep.current != -1) {
+            ep.ewindow.game.TryToExamineItem(ep.ewindow.game.Player.Equipment[ep.current]);
+        } else if (keycode == KeyEvent.VK_T && ep.current != -1) {
+            ep.ewindow.game.TryToTakeOffItem(ep.current);
+            boolean b = false;
+            for (int i = 0; i < Itemset.MAX_SLOTS; i++)
+                if (ep.ewindow.monster.Equipment[i] != null) b = true;
+            if (!b) ep.ewindow.stop();
+        } else if (keycode == KeyEvent.VK_ESCAPE) {
+            ep.ewindow.stop();
+            return;
+        }
 
-		else
-		if (keycode == KeyEvent.VK_ENTER && ep.current!=-1){
-			ep.ewindow.game.TryToExamineItem(ep.ewindow.game.Player.Equipment[ep.current]);
-		}
-		else
-		if (keycode == KeyEvent.VK_T && ep.current!=-1){
-			ep.ewindow.game.TryToTakeOffItem(ep.current);
-		 	boolean b = false;
-		 	for (int i=0; i<Itemset.MAX_SLOTS; i++)
-		 		if (ep.ewindow.monster.Equipment[i] != null) b = true;
-		 		if (!b) ep.ewindow.stop();
-		}
-		else
-		if (keycode == KeyEvent.VK_ESCAPE){
-			ep.ewindow.stop();
-			return;
-		}
-
-		ep.repaint();
+        ep.repaint();
 
 
-	}
+    }
 
-	public void keyReleased(KeyEvent event){};
+    public void keyReleased(KeyEvent event) {
+    }
 
-	public void keyTyped(KeyEvent event){};
+    ;
+
+    public void keyTyped(KeyEvent event) {
+    }
+
+    ;
 
 }

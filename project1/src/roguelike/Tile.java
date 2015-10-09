@@ -1,114 +1,126 @@
 package project1;
 
-import project1.Monster;
-import project1.Item;
-import java.util.*;
-public class Tile{
-	private int id;
-	private boolean isVisible;
-	private boolean isPassable;
-	private boolean isTransparent;
-	private boolean isSeen;
-	private boolean isBlood;
-	private boolean isOpenable;
-	private boolean isOpened;
-	public int lastseenID;
-	private boolean isSelected;
+import java.util.LinkedList;
 
-	private Monster monster;
-	private LinkedList<Item> itemlist;
+public class Tile {
+    public int lastseenID;
+    private int id;
+    private boolean isVisible;
+    private boolean isPassable;
+    private boolean isTransparent;
+    private boolean isSeen;
+    private boolean isBlood;
+    private boolean isOpenable;
+    private boolean isOpened;
+    private boolean isSelected;
 
-	public void setID(int id){
-		this.id = id;
-	}
+    private Monster monster;
+    private LinkedList<Item> itemlist;
 
-	public void setVisible(boolean isVisible){
-		this.isVisible = isVisible;
-	}
+    public Tile(int id, boolean isPassable, boolean isTransparent, boolean isOpenable) {
+        this.id = id;
+        this.isPassable = isPassable;
+        this.isTransparent = isTransparent;
+        this.isVisible = false;
+        this.isSeen = false;
+        if (id == Tileset.TILE_OPENED_DOOR)
+            this.isOpened = true;
+        else
+            this.isOpened = false;
+        itemlist = new LinkedList<Item>();
+        this.isOpenable = isOpenable;
+        monster = null;
+    }
 
+    public void setCursor(boolean b) {
+        isSelected = b;
+    }
 
-	public void setCursor(boolean b){
-		isSelected = b;
-	}
+    public boolean isSelected() {
+        return isSelected;
+    }
 
-	public boolean isSelected(){
-		return isSelected;
-	}
-	public void setOpenable(boolean op){
-		isOpenable = op;
-	}
+    public boolean getBlood() {
+        return isBlood;
+    }
 
-	public void setOpened(boolean op){
-		isOpened = op;
-	}
+    public void setBlood(boolean isBlood) {
+        this.isBlood = isBlood;
+    }
 
-	public void setSeen(boolean isSeen){
-			this.isSeen = isSeen;
-	}
+    public boolean getOpened() {
+        return isOpened;
+    }
 
-	public void setBlood(boolean isBlood){
-		this.isBlood = isBlood;
-	}
+    public void setOpened(boolean op) {
+        isOpened = op;
+    }
 
-	public boolean getBlood(){
-		return isBlood;
-	}
+    public int getID() {
+        return id;
+    }
 
-	public boolean getOpened(){
-		return isOpened;
-	}
+    public void setID(int id) {
+        this.id = id;
+    }
 
-	public void setPassable(boolean isPassable){
-		this.isPassable = isPassable;
-	}
+    public boolean getVisible() {
+        return isVisible;
+    }
 
-	public void setTransparent(boolean isTransparent){
-		this.isTransparent = isTransparent;
-	}
+    public void setVisible(boolean isVisible) {
+        this.isVisible = isVisible;
+    }
 
-	public void setMonster(Monster monster){
-		this.monster = monster;
-	}
+    public boolean getPassable() {
+        return isPassable;
+    }
 
+    public void setPassable(boolean isPassable) {
+        this.isPassable = isPassable;
+    }
 
-	public int getID(){return id;}
+    public boolean getOpenable() {
+        return isOpenable;
+    }
 
-	public boolean getVisible(){return isVisible;}
+    public void setOpenable(boolean op) {
+        isOpenable = op;
+    }
 
-	public boolean getPassable(){return isPassable;}
+    public boolean getSeen() {
+        return isSeen;
+    }
 
-	public boolean getOpenable(){return isOpenable;}
+    public void setSeen(boolean isSeen) {
+        this.isSeen = isSeen;
+    }
 
-	public boolean getSeen(){return isSeen;}
+    public Monster getMonster() {
+        return monster;
+    }
 
-	public Monster getMonster(){return monster;}
+    public void setMonster(Monster monster) {
+        this.monster = monster;
+    }
 
-	public void AddItem(Item x){
-		itemlist.add(x);
-	}
+    public void AddItem(Item x) {
+        itemlist.add(x);
+    }
 
-	public int getItemsQty(){
-		return itemlist.size();
-	}
+    public int getItemsQty() {
+        return itemlist.size();
+    }
 
-	public LinkedList<Item> getItemList(){
-		return itemlist;
-	}
+    public LinkedList<Item> getItemList() {
+        return itemlist;
+    }
 
-	public boolean getTransparent(){return isTransparent;}
+    public boolean getTransparent() {
+        return isTransparent;
+    }
 
-	public Tile(int id, boolean isPassable, boolean isTransparent, boolean isOpenable){
-		this.id = id;
-		this.isPassable = isPassable;
-		this.isTransparent = isTransparent;
-		this.isVisible = false;
-		this.isSeen = false;
-		if (id==Tileset.TILE_OPENED_DOOR)
-			this.isOpened = true;
-		else
-			this.isOpened = false;
-		itemlist = new LinkedList<Item>();
-		this.isOpenable = isOpenable;
-		monster = null;
-	}
+    public void setTransparent(boolean isTransparent) {
+        this.isTransparent = isTransparent;
+    }
 }

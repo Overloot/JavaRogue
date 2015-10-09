@@ -1,33 +1,46 @@
 package project1;
 
-public class BaseTile{
+public class BaseTile {
 
-	private int id;
-	private boolean isPassable;
-	private boolean isTransparent;
-	private boolean isOpenable;
-	private String path;
-	private String name;
+    private int id;
+    private boolean isPassable;
+    private boolean isTransparent;
+    private boolean isOpenable;
+    private String path;
+    private String name;
 
 
-	public BaseTile(int id, String name, String path, boolean isPassable, boolean isTransparent, boolean isOpenable){
-		this.id = id;
-		this.path = path;
-		this.isPassable = isPassable;
-		this.isTransparent = isTransparent;
-		this.isOpenable = isOpenable;
-		this.name = name;
-	}
+    public BaseTile(int id, String name, String path, boolean isPassable, boolean isTransparent, boolean isOpenable) {
+        this.id = id;
+        this.path = path;
+        this.isPassable = isPassable;
+        this.isTransparent = isTransparent;
+        this.isOpenable = isOpenable;
+        this.name = name;
+    }
 
-	public String getName(){return name;}
-	public int getID(){return id;}
+    public String getName() {
+        return name;
+    }
 
-	public boolean getPassable(){return isPassable;}
+    public int getID() {
+        return id;
+    }
 
-	public boolean getTransparent(){return isTransparent;}
+    public boolean getPassable() {
+        return isPassable;
+    }
 
-	public String getPath(){return path;}
+    public boolean getTransparent() {
+        return isTransparent;
+    }
 
-	public boolean getOpenable(){return isOpenable;}
+    public String getPath() {
+        return path;
+    }
+
+    public boolean getOpenable() {
+        return isOpenable;
+    }
 
 }
