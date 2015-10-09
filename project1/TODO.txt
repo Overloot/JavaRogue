@@ -1,7 +1,7 @@
-Разделить класс KeyHandler на классы KeyHandler и PlayerAction
-KeyHandler должен вызывать соответствующие нажатой кнопке методы класса PlayerAction.
+Р Р°Р·РґРµР»РёС‚СЊ РєР»Р°СЃСЃ KeyHandler РЅР° РєР»Р°СЃСЃС‹ KeyHandler Рё PlayerAction
+KeyHandler РґРѕР»Р¶РµРЅ РІС‹Р·С‹РІР°С‚СЊ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёРµ РЅР°Р¶Р°С‚РѕР№ РєРЅРѕРїРєРµ РјРµС‚РѕРґС‹ РєР»Р°СЃСЃР° PlayerAction
 
-грубо:
+РіСЂСѓР±Рѕ:
 KeyHandler
 {
 if (pressedKey == ARROW_LEFT) PlayerAction.moveLeft;
